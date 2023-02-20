@@ -1,0 +1,48 @@
+body, html {
+  background:#0A0A0A;
+  font-family: Inter, sans-serif;
+  color:white;
+}
+.grid-item {
+  position:relative;
+  text-decoration:none;
+  padding:20px;
+  color:white;
+  box-shadow:0 5px 10px rgba(0, 0, 0, 0.25);
+  border-radius:5px;
+  background:rgba(255, 255, 255, 0.01);
+  height:250px;
+
+  transition: transform .3s, background .2s, box-shadow .5s;
+
+  &:hover {
+    background:rgba(255, 255, 255, 0.025);
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+
+    h2 {
+      color:#6CFBCE;
+    }
+  }
+  
+  .icon {
+    font-size:40px;
+    color:#6CFBCE;
+  }
+
+  h2 {
+    transition: color .5s;
+    margin:10px 0;
+  }
+}
+
+.icon-button {
+  color:rgba(255,255,255,0.5);
+  padding:10px;
+  vertical-align:middle;
+  transition: color .5s;
+
+  &:hover {
+    color:rgba(255,255,255,1);
+  }
+}
