@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Ripple from "reactjs-ripple";
+import {useLanyard} from 'use-lanyard';
 
 import {
   RiFolderLine as FolderIcon
@@ -50,28 +51,23 @@ const Emphasis = styled.span`
 `
 
 export default function App() {
+  const { data } = useLanyard('620492146406981642');
+  
   return (
     <div>
       <Container>
-        <LargeHeading>Hi, I'm <Emphasis>LiquidDev</Emphasis></LargeHeading>
-        <LargeParagraph>insert text here :3 <i style={{ fontSize: '0.5em' }}>he/him</i></LargeParagraph>
+        
+        <LargeHeading>Hi, I'm <Emphasis>LiquidDev</Emphasis> 👋</LargeHeading>
+        <LargeParagraph>
+          insert text here :3<br/>
+          <i style={{ fontSize: '.5em' }}>he/him | front-end developer | {data ? data.discord_status : '(* ^ ω ^)'}</i>
+        </LargeParagraph>
+        <h1>💬 What I'm workin' on...</h1>
       <Grid>
-        <a className="grid-item" href="#">
+        <a data-type="link" className="grid-item interactable" href="https://github.com/Discord-AntiScam/scam-links">
           <div className="icon-container"><FolderIcon className="icon"/></div>
-          <h2>idk bro</h2>
-          <p>owoow ow owowo wow ow oo</p>
-          <Ripple/>
-        </a>
-        <a className="grid-item" href="#">
-          <div className="icon-container"><FolderIcon className="icon"/></div>
-          <h2>idk bro</h2>
-          <p>owoow ow owowo wow ow oo</p>
-          <Ripple/>
-        </a>
-        <a className="grid-item" href="#">
-          <div className="icon-container"><FolderIcon className="icon"/></div>
-          <h2>idk bro</h2>
-          <p>owoow ow owowo wow ow oo</p>
+          <h2>Discord Scam Prevention Project</h2>
+          <p>A database of over 366KBs scam links used for Discord, Steam and more.</p>
           <Ripple/>
         </a>
       </Grid>
